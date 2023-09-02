@@ -1,17 +1,51 @@
-# About :
-**tempmailo-wrapper-python** provides a convenient wrapper around the *tempmailo.com* service, allowing you to easily interact with temporary email functionality in your projects. With this library, you can create temporary email addresses, retrieve received messages, and perform various operations on them. It abstracts away the complexity of the underlying API and provides a simplified interface for seamless integration of temporary email functionality into your applications. Save time and effort by utilizing this wrapper to handle temporary email interactions in your projects.
+# TempMail Python Library
+
+TempMail is a Python library for creating and managing temporary email addresses using the TempMailo service (https://tempmailo.com/). This library allows you to create temporary email addresses, retrieve messages sent to those addresses, and get the currently assigned email address.
 
 
-## Usage :
+## Usage
 
-   ```python
-from tempmailo_wrapper import TempMail
+Here's how you can use the TempMail library in your Python code:
 
-temp_mail_instance = TempMail()
+```python
+from tempmailo import TempMail
 
-email_address = temp_mail_instance.get_email_address()
-print("Temporary email address:", email_address)
+# Create a TempMail object
+temp_mail = TempMail()
 
-messages = temp_mail_instance.get_messages()
-print(messages)
-  ```
+# Get the currently assigned email address
+email_address = temp_mail.get_email_address()
+print(f"Temporary Email Address: {email_address}")
+
+# Retrieve messages sent to the temporary email address
+messages = temp_mail.get_messages()
+for message in messages:
+    print(f"Subject: {message['Subject']}")
+    print(f"From: {message['From']}")
+    print(f"Date: {message['Date']}")
+    print(f"Message: {message['Message']}")
+    print()
+
+# Note: Make sure to handle exceptions and error messages appropriately in your code.
+```
+
+## Features
+
+- Create temporary email addresses.
+- Retrieve messages sent to the temporary email address.
+- Get the currently assigned email address.
+
+## Requirements
+
+- Python 3.x
+- Requests library
+- BeautifulSoup library
+- JSON library
+
+## Contributing
+
+Contributions to this library are welcome. If you encounter any issues or have suggestions for improvements, please create an issue on the [GitHub repository](https://github.com/chandandanjo/tempmailo-wrapper-python/) or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
