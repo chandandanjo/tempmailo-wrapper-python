@@ -1,6 +1,6 @@
 # TempMail Python Library
 
-TempMail is a Python library for creating and managing temporary email addresses using the TempMailo service (https://tempmailo.com/). This library allows you to create temporary email addresses, retrieve messages sent to those addresses, and get the currently assigned email address.
+TempMail is a Python library for creating and managing temporary email addresses using the [TempMailo](https://tempmailo.com/) service. This library allows you to create temporary email addresses, retrieve messages sent to those addresses, and get the currently assigned email address.
 
 
 ## Usage
